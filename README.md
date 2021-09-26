@@ -1,13 +1,13 @@
 # Dokumentasi Instalasi, Konfigurasi, Service Management
 
 ## Install & Config Node.Js di Linux (Ubuntu)
-untuk menginstall node.js bisa mengikuti langkah-langkah berikut :
-- masukkan command pada terminal :
+__untuk menginstall node.js bisa mengikuti langkah-langkah berikut :__
+- __masukkan command pada terminal :__
   > curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
 ![input installation command](https://user-images.githubusercontent.com/90192123/134821899-682b2288-386b-4a13-a4ca-db57b7233936.png)
 
-- > installation version
+- > __cek versi instalasi__
 > nvm install 14.7.0
 
 ![nvm install 14 7 0](https://user-images.githubusercontent.com/90192123/134822450-fa9ddffd-da4f-4e59-8ab6-0f8d050b8be6.png)
@@ -87,3 +87,110 @@ akan menampilkan output berikut :
 artinya App yang kita buat berhasil dijalankan
 
 ## Instal & Config Python di Linux (Ubuntu)
+ikuti langkah-langkah berikut :
+- > __lakukan update dengan perintah pada terminal seperti berikut :__
+  - > sudo apt update
+
+![sudo apt update](https://user-images.githubusercontent.com/90192123/134824601-42df7510-e405-431b-9a6e-2d10bc134f94.png)
+
+![output sudo apt update](https://user-images.githubusercontent.com/90192123/134824624-536c9484-813a-438b-865a-40e106122104.png)
+
+- > __setelah update, lakukan upgrade dengan perintah berikut :__
+  - > sudo apt upgrade -y
+
+![sudo apt upgrade -y](https://user-images.githubusercontent.com/90192123/134824637-026e94f8-137b-4de3-af61-53ddb339f993.png)
+
+![output sudo apt upgrade -y](https://user-images.githubusercontent.com/90192123/134824644-8bf978c9-aca2-4bf9-9bc8-aaed6cdbc419.png)
+
+- > __setelah upgrade, kita cek versi Python yang terinstal, karena defaultnya menggunakan Python3, dengan melakukan perintah berikut :___
+  - > python3 -V
+
+![input output python3 -V](https://user-images.githubusercontent.com/90192123/134824654-c92039a1-c269-43da-a6a3-8ae3c0b06aab.png)
+
+__setelah mengetahui versi python yang terinstal, lalu masukkan perintah berikut ini untuk menginstall package manager :__
+  - > sudo apt install python3-pip
+tunggu sampai proses instalasi selesai, jika sudah lakukan perintah berikut untuk menginstall flask :
+  - > pip install flask
+
+![pip install flask](https://user-images.githubusercontent.com/90192123/134824673-2854812f-4140-4607-ab01-a80597926ac5.png)
+
+__Membuat folder Python dengan perintah berikut :__
+- > mkdir-python
+
+![mkdir-python](https://user-images.githubusercontent.com/90192123/134824683-30455082-4202-41bb-a325-0f6bb0a3a319.png)
+
+__lalu buatlah folder dengan perintah berikut :__
+- > nano index.py
+
+![nano index py](https://user-images.githubusercontent.com/90192123/134824744-38b0441a-2a03-4a8a-bbfd-4afbc03b2a8c.png)
+
+__masukkan script codenya__
+
+![nano index py script](https://user-images.githubusercontent.com/90192123/134824756-0bc6b655-5b4f-4e96-8685-52afea0f83fe.png)
+
+__lalu tekan CTRL+X, Y, Enter__
+
+__Jalankan app dengan perintah berikut :__
+- > python3 index.py
+
+![output python3 index py](https://user-images.githubusercontent.com/90192123/134824804-045e34ea-a75c-47b1-98ae-f28243c84ae2.png)
+
+__lalu buka browser dan masukkan url dengan port 5000:__
+- > localhost:5000
+![localhost python](https://user-images.githubusercontent.com/90192123/134824874-895e40e3-5da6-4985-bee5-95c25d19e383.png)
+
+### Install & Config Golang di Linux (Ubuntu)
+__hal pertama yang harus dilakukan adalah mendownload go, dengan melakukan perintah berikut :__
+- > wget https://golang.org/dl/go1.16.5.linux-amd64.tar.gz && sudo su
+
+![install go](https://user-images.githubusercontent.com/90192123/134827007-458338cf-0af3-4ac1-82d3-feda799d30ca.png)
+
+![apt install go](https://user-images.githubusercontent.com/90192123/134827024-23e14b0d-2c88-4dee-afca-a5315cfdd775.png)
+
+__lalu selanjutnya extract dan copy data__
+- > rm-rf/usr/local/go&&tar-C/usr/local-xzf go1.16.5.linux-amd64.tar.gz && exit
+
+![extrak dan copy go](https://user-images.githubusercontent.com/90192123/134827053-14df8096-c4e2-49a6-a69c-3025372475a1.png)
+
+__langkah selanjutnya adalah memasukkan path go pada bashrc__
+- > export PATH=$PATH:/usr/local/go/bin
+
+![path go bash](https://user-images.githubusercontent.com/90192123/134827094-1797b733-cb6e-4d3b-be1a-f1b7370b1308.png)
+
+__cek versi yang telah terinstall__
+
+![go version](https://user-images.githubusercontent.com/90192123/134827122-a99d86be-9918-4a4b-b4cd-cf6326b6beb7.png)
+
+__Membuat folder go dengan melakukan perintah berikut :__
+- > mkdir myapp-golang
+
+![mkdir go](https://user-images.githubusercontent.com/90192123/134827149-58b55653-c532-48dc-b97a-69146053963a.png)
+
+pindah ke directory yang sudah dibuat 
+- > cd myapp-golang
+
+![cd myapp go](https://user-images.githubusercontent.com/90192123/134827208-f34bb97d-f5b9-423b-9eea-20db278e90f0.png)
+
+__selanjutkan buatlah file dengan melakukan perintah berikut :__
+- > nano index.go
+
+![nano index go](https://user-images.githubusercontent.com/90192123/134827230-e96a4e26-fbbc-4f0d-b0a5-d7f0a717ad83.png)
+
+__*masukkan script code*__
+
+![script golang](https://user-images.githubusercontent.com/90192123/134827241-58571219-a564-4021-b230-3a41b2d6565e.png)
+
+__jalankan app dengan menggunakan perintah berikut : __
+- > go run index.go
+
+![go run index go](https://user-images.githubusercontent.com/90192123/134827282-0610a350-d56d-4e5f-b95d-aaebb614c9c3.png)
+
+__*jika ingin di build bisa melakukan perintah berikut :*__
+- > go build index.go
+
+![go build](https://user-images.githubusercontent.com/90192123/134827311-695de00f-bf0c-4b7b-91c6-ac7e15e723ea.png)
+
+__*perintah untuk menjalankan program go yang sudah di build*__
+- > ./index
+
+![go new build](https://user-images.githubusercontent.com/90192123/134827347-fc092009-f7a6-4517-8bfa-4093897baedb.png)
