@@ -180,7 +180,7 @@ __*masukkan script code*__
 
 ![script golang](https://user-images.githubusercontent.com/90192123/134827241-58571219-a564-4021-b230-3a41b2d6565e.png)
 
-__jalankan app dengan menggunakan perintah berikut : __
+__jalankan app dengan menggunakan perintah berikut :__
 - > go run index.go
 
 ![go run index go](https://user-images.githubusercontent.com/90192123/134827282-0610a350-d56d-4e5f-b95d-aaebb614c9c3.png)
