@@ -194,3 +194,36 @@ __*perintah untuk menjalankan program go yang sudah di build*__
 - > ./index
 
 ![go new build](https://user-images.githubusercontent.com/90192123/134827347-fc092009-f7a6-4517-8bfa-4093897baedb.png)
+
+### Service Management
+__Systemd__ adalah standar manager sistem linux saat ini. Fungsi dari systemd ini memberikan sebuah metode untuk mengaktifkan system resource, daemons dan proses lainnya, baik itu ketika booting maupun ketika sistem berjalan.
+
+Command yang digunakan untuk systemd adalah __*systemctl*__
+
+berikut ini macam-macam perintah dari systemd :
+
+- __Start__ : Menjalankan service
+  - > sudo apt install nginx
+
+![sudo apt install nginx](https://user-images.githubusercontent.com/90192123/134843711-158099e2-616f-46ee-be73-a3a7c0eaa918.png)
+
+tunggu sampai proses selesai, lalu lakukan perintah berikut :
+- __Restart__ : Merestart service yang sedang berjalan
+  - > sudo systemctl restart nginx
+
+![sudo apt restart nginx](https://user-images.githubusercontent.com/90192123/134844386-a1bcd837-3a11-4591-9511-d40bdff04550.png)
+
+- __Enable__ : Mengaktifkan service ketika boot
+  - > sudo systemctl enable nginx
+ 
+ ![enable nginx](https://user-images.githubusercontent.com/90192123/134844446-9e31f864-8d33-44fe-962a-7a1fa8188a08.png)
+ 
+- __Disable__ : Menonaktifkan service ketika boot
+  - > sudo systemctl disable nginx
+
+![disable nginx](https://user-images.githubusercontent.com/90192123/134844501-180a7257-e347-4ebf-808c-25123b924584.png)
+
+- __Status__ : Menampilkan status service
+  - > sudo systemctl status nginx
+
+![status nginx](https://user-images.githubusercontent.com/90192123/134844575-c3ba2b7e-02f8-46a0-8b89-da3eac30e73d.png)
