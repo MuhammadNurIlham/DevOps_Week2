@@ -3,7 +3,7 @@
 ## Install & Config Node.Js di Linux (Ubuntu)
 __untuk menginstall node.js bisa mengikuti langkah-langkah berikut :__
 - __masukkan command pada terminal :__
-  > curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+  > curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash 
 
 ![input installation command](https://user-images.githubusercontent.com/90192123/134821899-682b2288-386b-4a13-a4ca-db57b7233936.png)
 
@@ -227,3 +227,39 @@ tunggu sampai proses selesai, lalu lakukan perintah berikut :
   - > sudo systemctl status nginx
 
 ![status nginx](https://user-images.githubusercontent.com/90192123/134844575-c3ba2b7e-02f8-46a0-8b89-da3eac30e73d.png)
+
+### Memori & Storage
+__Memori (RAM) Random Access Memory adalah media penyimpanan sementara__
+__Storage adalah media penyimpanan, karena pada dasarnya semua sistem operasi di install diatas storage
+
+- __untuk mengecek atau memeriksa memory, lakukan perintah berikut pada terminal:__
+  untuk menginstall htop
+  - > sudo apt install htop
+
+![install htop](https://user-images.githubusercontent.com/90192123/135430762-54f7dbb4-09c7-45c9-8255-588ef4a01504.png)
+
+- __lakukan perintah berikut untuk memeriksa memory
+  - > htop
+
+![cek htop](https://user-images.githubusercontent.com/90192123/135431097-e8d7ccf2-bfb9-4380-9a01-a4e07b9c7e2a.png)
+
+output ketika memeriksa memory dengan perintah ___*htop*__
+
+![memeriksa htop](https://user-images.githubusercontent.com/90192123/135431297-5268cd20-16f9-4d03-b529-6a1a42149ca9.png)
+
+__untuk melihat penggunaan storage__
+
+lakukan perintah berikut pada terminal
+  - > df -h
+
+![storage](https://user-images.githubusercontent.com/90192123/135432870-373b082b-8788-4afe-adbb-8bad5c50c1f1.png)
+
+### File System
+
+__File System__ adalah pengaturan penyimpanan data yang sangat mempermudah pekerjaan sehari-hari
+
+jenis-jenis file system:
+- __*FAT32*__ :Cocok digunakan pada media penyimpanan kecil 
+- __*NTFS*__ : cocok digunakan untuk OS Windows XP s.d Windows 10
+- __*EXT2/EXT3/EXT4*__ :cocok digunakan untuk OS Linux (rekomendasi EXT4)
+- __*BTRFS*__ :digunakan untuk menangani masalah pada linux seperti snapshots
